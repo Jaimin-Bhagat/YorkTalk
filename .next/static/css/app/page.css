@@ -1,0 +1,223 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/styles/sideNavStyles.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/* SideNav Styles */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  margin-left: 4rem;
+  max-width: 200px;
+  flex-shrink: 0;
+  display: block;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  margin-top: 68px; /* Account for navbar height */
+  padding-bottom: 100px; /* Add padding at the bottom to ensure all items are visible */
+}
+
+.side-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.side-nav-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+/* Nav sections */
+.side-nav-section {
+  margin-bottom: 16px;
+  width: 100%;
+  display: block;
+}
+
+.side-nav-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+
+/* Nav section title */
+.side-nav-section-title {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+  text-transform: uppercase;
+}
+
+/* Divider */
+.side-nav-divider {
+  margin: 6px 0;
+  border-color: #d1d5db;
+}
+
+/* Nav items */
+.side-nav-item {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0.5rem;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  color: #4b5563;
+  transition: background-color 0.2s;
+}
+
+.side-nav-item:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.side-nav-item.active {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Nav item inner container */
+.side-nav-item-inner {
+  display: flex;
+  height: 22px;
+  flex: 1 1;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Nav item icon */
+.side-nav-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #4b5563;
+}
+
+.side-nav-item.active .side-nav-item-icon {
+  color: #111827;
+}
+
+/* Nav item text */
+.side-nav-item-text {
+  flex: 1 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0; /* Important for text truncation in flex containers */
+  max-width: 140px; /* Limit width to ensure truncation */
+}
+
+/* Nav item badge */
+.side-nav-item-badge {
+  position: relative;
+  bottom: 2px;
+  right: 1px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+/* Show more button */
+.side-nav-show-more {
+  margin-top: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #111827;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.side-nav-show-more-inner {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  border-radius: 0.5rem;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+}
+
+.side-nav-show-more-inner:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.side-nav-show-more-text {
+  font-size: 0.75rem;
+}
+
+.side-nav-show-more-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  width: 14px;
+  transition: transform 0.2s;
+}
+
+.side-nav-show-more-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Hidden items */
+.side-nav-item-hidden {
+  display: none;
+}
+
+/* Contact Us special styling */
+.contact-us-item {
+  margin-top: 8px !important;
+  background-color: rgba(255, 51, 51, 0.1) !important;
+  color: #111827 !important;
+  font-weight: 500 !important;
+}
+
+.contact-us-item:hover {
+  background-color: rgba(255, 51, 51, 0.2) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .side-nav {
+    position: relative;
+    top: 0;
+    height: auto;
+    max-height: none;
+    margin-bottom: 16px;
+  }
+  
+  .side-nav-container {
+    max-height: none;
+  }
+}
+
