@@ -88,19 +88,19 @@ export default function Feed() {
         <div className="relative">
           <div className="flex items-center text-sm">
             <span className="text-gray-600 mr-2">Sort by :</span>
-            <button 
+            <button
               onClick={toggleDropdown}
-              className="flex items-center font-medium"
+              className="flex items-center font-medium text-gray-700"
             >
               {sortBy} <ChevronDown size={16} className="ml-1" />
             </button>
           </div>
-          
+
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10">
               <ul className="py-1">
                 <li>
-                  <button 
+                  <button
                     className={`block px-4 py-2 text-sm w-full text-left ${sortBy === 'Popular' ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
                     onClick={() => handleSortChange('Popular')}
                   >
@@ -108,7 +108,7 @@ export default function Feed() {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     className={`block px-4 py-2 text-sm w-full text-left ${sortBy === 'Recent' ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
                     onClick={() => handleSortChange('Recent')}
                   >
@@ -116,7 +116,7 @@ export default function Feed() {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     className={`block px-4 py-2 text-sm w-full text-left ${sortBy === 'Trending' ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
                     onClick={() => handleSortChange('Trending')}
                   >
@@ -130,7 +130,7 @@ export default function Feed() {
       </div>
 
       {/* Feed posts */}
-      <div className="space-y-4">
+      <div className="space-y-0">
         {samplePosts.map((post) => (
           <FeedPost
             key={post.id}
@@ -152,4 +152,4 @@ export default function Feed() {
       </div>
     </div>
   );
-} 
+}
