@@ -69,11 +69,11 @@ main {
   
   /* Feed styles */
   .feed-post {
-    @apply bg-white shadow rounded-lg overflow-hidden transition-shadow hover:shadow-md border border-gray-300;
+    @apply bg-white shadow-sm rounded-lg overflow-hidden transition-all hover:shadow border border-gray-200;
   }
   
   .feed-post-header {
-    @apply flex items-center mb-3;
+    @apply flex items-start mb-3;
   }
   
   .feed-post-avatar {
@@ -92,47 +92,37 @@ main {
     @apply flex items-center justify-between text-sm text-gray-500 pt-3 border-t border-gray-100;
   }
   
-  .feed-post-actions {
-    @apply flex space-x-4;
-  }
-  
-  .feed-post-action {
-    @apply flex items-center hover:text-gray-700 transition-colors;
-  }
-  
-  /* Most read section */
+  /* Most Read section */
   .most-read-section {
-    @apply bg-gray-50 rounded-lg p-4 mt-6 border border-gray-300;
+    @apply bg-white p-4 rounded-lg shadow-sm border border-gray-200 mt-6;
   }
   
   .most-read-item {
-    @apply flex items-start py-2;
+    @apply flex items-start gap-3 py-2 border-b border-gray-100 last:border-0;
   }
   
   .most-read-number {
-    @apply bg-gray-200 text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0;
+    @apply flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-700 font-bold text-sm flex-shrink-0;
   }
   
   /* Auth form styles */
   .auth-form label {
-    @apply text-center block w-full;
+    @apply block text-sm font-medium text-gray-700 mb-1;
   }
   
   .auth-form input {
-    @apply text-center mx-auto;
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
   }
   
   .auth-form p {
-    @apply text-center;
+    @apply mt-1 text-sm text-gray-500;
   }
   
-  /* Button styles for auth forms */
   .auth-form .btn {
-    @apply rounded-md;
+    @apply w-full;
   }
   
-  /* Black button with white text for auth forms */
   .auth-form .btn-primary {
-    @apply bg-black text-white hover:bg-gray-800;
+    @apply mt-4;
   }
 } 
