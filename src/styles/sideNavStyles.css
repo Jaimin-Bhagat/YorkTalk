@@ -1,0 +1,163 @@
+/* SideNav Styles */
+.side-nav {
+  position: sticky;
+  top: 68px;
+  z-index: 10;
+  height: 100%;
+  min-width: 200px;
+  max-width: 220px;
+  flex-shrink: 0;
+  display: block;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav-container {
+  display: flex;
+  max-height: calc(100vh - 86px);
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+  user-select: none;
+  padding: 8px;
+}
+
+.side-nav-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Nav sections */
+.side-nav-section {
+  margin-bottom: 0;
+}
+
+.side-nav-section-content {
+  width: 100%;
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+}
+
+/* Nav section title */
+.side-nav-section-title {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+  text-transform: uppercase;
+}
+
+/* Divider */
+.side-nav-divider {
+  margin: 6px 0;
+  border-color: #d1d5db;
+}
+
+/* Nav items */
+.side-nav-item {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0.5rem;
+  padding: 6px 10px;
+  font-size: 0.8125rem;
+  color: #4b5563;
+  transition: background-color 0.2s;
+}
+
+.side-nav-item:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.side-nav-item.active {
+  background-color: #e5e7eb;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Nav item inner container */
+.side-nav-item-inner {
+  display: flex;
+  height: 22px;
+  flex: 1;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Nav item icon */
+.side-nav-item-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+/* Nav item text */
+.side-nav-item-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Nav item badge */
+.side-nav-item-badge {
+  position: relative;
+  bottom: 2px;
+  right: 1px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+/* Show more button */
+.side-nav-show-more {
+  margin-top: 8px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #111827;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.side-nav-show-more-inner {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  border-radius: 0.5rem;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+.side-nav-show-more-inner:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.side-nav-show-more-text {
+  font-size: 0.75rem;
+}
+
+.side-nav-show-more-icon {
+  height: 14px;
+  width: 14px;
+  transition: transform 0.2s;
+}
+
+.side-nav-show-more-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Hidden items */
+.side-nav-item-hidden {
+  display: none;
+} 

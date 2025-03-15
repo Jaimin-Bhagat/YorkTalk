@@ -1,0 +1,48 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red background rectangle -->
+  <rect x="100" y="100" width="600" height="600" rx="40" ry="40" fill="#ff0000" />
+  
+  <!-- White inner border -->
+  <rect x="120" y="120" width="560" height="560" rx="30" ry="30" fill="none" stroke="white" stroke-width="10" />
+  
+  <!-- Upper section with YT -->
+  <rect x="140" y="140" width="520" height="240" fill="none" stroke="white" stroke-width="5" />
+  
+  <!-- Tulip icon (simplified) -->
+  <path d="M220,180 C220,220 200,240 200,280 C200,320 240,340 240,280 C240,240 220,220 220,180 Z" fill="white" />
+  <path d="M220,200 C200,220 180,240 200,280 C220,320 240,300 220,260 Z" fill="white" />
+  <path d="M220,200 C240,220 260,240 240,280 C220,320 200,300 220,260 Z" fill="white" />
+  
+  <!-- YT text -->
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="white" text-anchor="middle">YT</text>
+  
+  <!-- Lower section with tulips -->
+  <rect x="140" y="380" width="520" height="240" fill="none" stroke="white" stroke-width="5" />
+  
+  <!-- Grid for tulips (3x3) -->
+  <line x1="313" y1="380" x2="313" y2="620" stroke="white" stroke-width="5" />
+  <line x1="486" y1="380" x2="486" y2="620" stroke="white" stroke-width="5" />
+  
+  <!-- Simplified tulips in grid -->
+  <g transform="translate(226, 500) scale(0.6)">
+    <path d="M0,0 C0,40 -20,60 -20,100 C-20,140 20,160 20,100 C20,60 0,40 0,0 Z" fill="white" />
+    <path d="M0,20 C-20,40 -40,60 -20,100 C0,140 20,120 0,80 Z" fill="white" />
+    <path d="M0,20 C20,40 40,60 20,100 C0,140 -20,120 0,80 Z" fill="white" />
+  </g>
+  
+  <g transform="translate(400, 500) scale(0.6)">
+    <path d="M0,0 C0,40 -20,60 -20,100 C-20,140 20,160 20,100 C20,60 0,40 0,0 Z" fill="white" />
+    <path d="M0,20 C-20,40 -40,60 -20,100 C0,140 20,120 0,80 Z" fill="white" />
+    <path d="M0,20 C20,40 40,60 20,100 C0,140 -20,120 0,80 Z" fill="white" />
+  </g>
+  
+  <g transform="translate(573, 500) scale(0.6)">
+    <path d="M0,0 C0,40 -20,60 -20,100 C-20,140 20,160 20,100 C20,60 0,40 0,0 Z" fill="white" />
+    <path d="M0,20 C-20,40 -40,60 -20,100 C0,140 20,120 0,80 Z" fill="white" />
+    <path d="M0,20 C20,40 40,60 20,100 C0,140 -20,120 0,80 Z" fill="white" />
+  </g>
+  
+  <!-- YORK TALK text below the logo -->
+  <text x="400" y="720" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#ff0000" text-anchor="middle">YORK</text>
+  <text x="400" y="780" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#ff0000" text-anchor="middle">TALK</text>
+</svg> 
