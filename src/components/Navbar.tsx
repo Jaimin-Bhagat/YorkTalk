@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { signOut, useSession } from 'next-auth/react'
 import { Search } from 'lucide-react'
 import '../styles/headerStyles.css'
@@ -11,6 +11,7 @@ import '../styles/headerStyles.css'
 export default function Navbar() {
   const { data: session } = useSession()
   const pathname = usePathname()
+  const router = useRouter()
 
   const handleSignOut = async () => {
     await signOut({ callbackUrl: '/' })
@@ -20,6 +21,13 @@ export default function Navbar() {
     return pathname === path
   }
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname !== '/') {
+      e.preventDefault()
+      router.push('/')
+    }
+  }
+
   return (
     <header>
       <div className="max-w-7xl mx-auto w-full px-4">
@@ -27,13 +35,13 @@ export default function Navbar() {
           {/* Left section: Logo and search */}
           <div className="flex items-center">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0" onClick={handleLogoClick}>
               <Image 
-                src="/york-talk-logo.svg" 
+                src="/york-talk-high-resolution-logo.png" 
                 alt="York Talk Logo" 
-                width={40} 
+                width={100} 
                 height={40} 
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity logo-image"
               />
             </Link>
             
@@ -50,18 +58,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Center section: Main navigation links */}
-          <div className="flex items-center justify-center flex-1 mx-4">
-            <Link
-              href="/"
-              className={`text-sm font-medium ${
-                isActive('/') 
-                  ? 'text-black border-b-2 border-red-500' 
-                  : 'text-gray-500 hover:text-gray-900 hover:border-b-2 hover:border-gray-300'
-              }`}
-            >
-              Community
-            </Link>
+          {/* Center section: Empty space */}
+          <div className="flex-1 mx-4">
+            {/* Community heading removed */}
           </div>
 
           {/* Right section: Auth buttons */}

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'York Talk',
   description: 'York University\'s Anonymous Community Platform',
   icons: {
-    icon: '/york-talk-logo.svg',
+    icon: '/york-talk-high-resolution-logo.png',
   },
 }
 
@@ -22,11 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-50`}>
+    <html lang="en" className="h-full">
+      <body className={`${inter.className} bg-gray-50 min-h-screen flex flex-col`}>
         <AuthProvider>
           <Navbar />
-          <main className="min-h-screen">
+          <main className="flex-1 w-full">
             {children}
           </main>
           <Toaster position="bottom-right" />

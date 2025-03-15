@@ -71,6 +71,7 @@ header {
   background-color: rgb(255 255 255/var(--tw-bg-opacity));
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.10);
   height: 70px;
+  margin-top: 0;
 } 
 
 /* Header inner container */
@@ -90,7 +91,7 @@ header > div > div {
 
 /* Left section with logo and search */
 header .flex-shrink-0 {
-  margin-right: 1rem;
+  margin-right: 3rem;
   display: flex;
   align-items: center;
 }
@@ -98,6 +99,16 @@ header .flex-shrink-0 {
 /* Logo image */
 header .flex-shrink-0 img {
   transition: opacity 0.2s ease;
+  margin-left: 4rem;
+  object-fit: contain;
+  width: 100%;
+  max-width: 100px;
+}
+
+.logo-image {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 80% !important;
 }
 
 header .flex-shrink-0 img:hover {

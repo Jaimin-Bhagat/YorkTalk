@@ -93,9 +93,9 @@ export default function Dashboard() {
         </div>
 
         {/* Left sidebar - Simplified SideNav */}
-        <div className="md:block border border-gray-300 rounded-lg p-2 mb-4" style={{ minWidth: '240px', backgroundColor: 'white' }}>
-          <p className="text-sm text-gray-500 mb-2">Simplified SideNav:</p>
-          <div style={{ border: '1px dashed blue', padding: '8px' }}>
+        <div className="md:block border border-gray-300 rounded-lg p-2 mb-4" style={{ minWidth: '300px', backgroundColor: 'white' }}>
+          <p className="text-sm text-gray-500 mb-2">Simplified SideNav (Updated Faculties):</p>
+          <div style={{ border: '2px solid blue', padding: '8px' }}>
             <SimpleSideNav />
           </div>
         </div>

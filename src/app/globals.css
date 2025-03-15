@@ -4,13 +4,28 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 245, 245, 245;
+  --background-end-rgb: 245, 245, 245;
+  --navbar-height: 68px;
+  --sidebar-width: 200px;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 0;
 }
 
 @layer components {
@@ -28,6 +43,74 @@ body {
   
   .input {
     @apply px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent;
+  }
+  
+  /* Layout styles */
+  .main-layout {
+    @apply flex flex-col md:flex-row;
+    padding-left: calc(var(--sidebar-width) + 4rem);
+  }
+  
+  .sidebar-container {
+    @apply fixed left-0 top-0 h-screen;
+    width: var(--sidebar-width);
+    margin-left: 4rem;
+    margin-top: var(--navbar-height);
+    z-index: 10;
+  }
+  
+  .content-container {
+    @apply w-full max-w-3xl mx-auto;
+    margin-top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    padding: 5rem;
+  }
+  
+  /* Feed styles */
+  .feed-post {
+    @apply bg-white shadow rounded-lg overflow-hidden transition-shadow hover:shadow-md border border-gray-300;
+  }
+  
+  .feed-post-header {
+    @apply flex items-center mb-3;
+  }
+  
+  .feed-post-avatar {
+    @apply rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0;
+  }
+  
+  .feed-post-title {
+    @apply text-lg font-semibold mb-2;
+  }
+  
+  .feed-post-content {
+    @apply text-gray-700 mb-4;
+  }
+  
+  .feed-post-footer {
+    @apply flex items-center justify-between text-sm text-gray-500 pt-3 border-t border-gray-100;
+  }
+  
+  .feed-post-actions {
+    @apply flex space-x-4;
+  }
+  
+  .feed-post-action {
+    @apply flex items-center hover:text-gray-700 transition-colors;
+  }
+  
+  /* Most read section */
+  .most-read-section {
+    @apply bg-gray-50 rounded-lg p-4 mt-6 border border-gray-300;
+  }
+  
+  .most-read-item {
+    @apply flex items-start py-2;
+  }
+  
+  .most-read-number {
+    @apply bg-gray-200 text-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0;
   }
   
   /* Auth form styles */
