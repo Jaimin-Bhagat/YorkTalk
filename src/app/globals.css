@@ -86,11 +86,11 @@ main {
   }
   
   .feed-post-content {
-    @apply text-gray-700 mb-4;
+    @apply text-gray-700 mb-1;
   }
   
   .feed-post-footer {
-    @apply flex items-center justify-between text-sm text-gray-500 pt-3 border-t border-gray-100;
+    @apply flex items-center justify-between text-sm text-gray-500 pt-3 border-t border-gray-100 mt-2;
   }
   
   /* Most Read section */
